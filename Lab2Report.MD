@@ -88,6 +88,36 @@ ls -la — комбінований ключ для детального від�
 - видалити створений раніше підкаталог із файлом із запитом на видалення;
 - видалити файл, скопійований до домашнього каталогу.
 
+Спочатку у моєму підкаталозі data я створив файл dirstr в який помістив інформацію про каталоги домашньому котолозі
+
+```
+student@CsnKhai:~/data$ ls -la ../ > dirstr
+```
+
+Перевіряємо записи за допомогою команди less dirstr
+
+![alt text](image-10.png)
+
+Тепер  я скопіював мій підкаталог dirstr у домашній каталог
+
+![alt text](image-11.png)
+
+Після цього я видалив цей файл з обох каталогів
+
+```
+student@CsnKhai:~$ rm dirstr
+student@CsnKhai:~$ ls
+data  lab2
+```
+
+```
+student@CsnKhai:~$ cd data
+student@CsnKhai:~/data$ ls
+boys  dirstr  girls
+student@CsnKhai:~/data$ rm dirstr
+student@CsnKhai:~/data$ ls
+boys  girls
+```
 
 
 ### 6) Виконати таку послідовність операцій:
