@@ -178,8 +178,16 @@ hard_lnk_labwork2  symb_lnk_labwork2
 
 ![alt text](image-14.png)
 
+
 ### 7) Використовуючи утиліту locate знайти всі файли, в яких зустрічається послідовність squid і traceroute.
 
+Скориставшись командою locate я не знайшов файлів з squid та знайшов пару з traceroute
+
+![alt text](image-15.png)
+
+Я не знайшов нічого в squid, тому знайшов файли з passwd
+
+![alt text](image-16.png)
 
 
 ### 8) Визначити, які розділи змонтовані у системі, і навіть типи цих розділів.
