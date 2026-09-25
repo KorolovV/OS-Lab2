@@ -130,7 +130,53 @@ boys  girls
 - перейменуйте файл м'якого посилання на файл symb_lnk_labwork2;
 - потім видаліть файл labwork2. Які відбулися зміни та чому?
 
+Спочатку створив підкаталог test
 
+```
+student@CsnKhai:~$ mkdir test
+student@CsnKhai:~$ ls
+data  lab2  test
+```
+
+Потім я скопіював файл .bash_history, змінивши його ім'я на labwork2 у цей каталог
+
+```
+student@CsnKhai:~$ cp .bash_history ./test/labwork2
+student@CsnKhai:~$ cd test
+student@CsnKhai:~/test$ ls
+labwork2
+```
+
+Жорстке посилання: Це додатковий вказівник на той самий фізичний ділянку диска, що й оригінальний файл. Якщо видалити оригінал, файл і його вміст залишаться доступними через жорстке посилання.
+
+```
+student@CsnKhai:~/test$ ln labwork2 hllb2
+```
+
+М’яке посилання: Це окремий файл-ярлик, який містить лише шлях до оригінального файла. Якщо видалити оригінальний файл, м’яке посилання стане недійсним («бітим»).
+
+```
+student@CsnKhai:~/test$ ln -s labwork2 slllb2
+```
+
+Тепер підкаталог dirstr виглядає так
+
+![alt text](image-12.png)
+
+За допомогою команди mv я змінив назви посилань
+
+```
+student@CsnKhai:~/test$ mv hllb2 hard_lnk_labwork2
+student@CsnKhai:~/test$ mv slllb2 symb_lnk_labwork2
+student@CsnKhai:~/test$ ls
+hard_lnk_labwork2  symb_lnk_labwork2
+```
+
+Я видалив файл labwork2 і у мене перестало працювати м'яке посилання, бо оригінальний файл був видалений
+
+![alt text](image-13.png)
+
+![alt text](image-14.png)
 
 ### 7) Використовуючи утиліту locate знайти всі файли, в яких зустрічається послідовність squid і traceroute.
 
