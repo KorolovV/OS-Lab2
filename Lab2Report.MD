@@ -232,7 +232,16 @@ student@CsnKhai:/$ grep -c "bin" /etc/passwd
 
 ### 13) Які бувають типи пристроїв і як визначити тип пристрою? Навести приклади.
 
+Визначено типи пристроїв у каталозі /dev. Для файлу tty перша літера прав доступу c та вивід команди file вказують на символьний пристрій (character special). Для файлу sda1 літера b та вивід file вказують на блоковий пристрій (block special)
 
+![alt text](image-21.png)
+
+```
+student@CsnKhai:/dev$ file sda1
+sda1: block special
+student@CsnKhai:/dev$ file tty
+tty: character special
+```
 
 ### 14) Як визначити тип файлу у системі, які типи файлів бувають?
 
